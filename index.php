@@ -1,12 +1,12 @@
 <?php
 
 /**
-* Simple memchached dashboard
-* A dead simple single file Memchaced stats dashboard.
+* Simple memcached dashboard
+* A dead simple single file Memcached stats dashboard.
 * @version 0.1.1
 * @author Ohad Raz <admin@bainternet.info>
 */
-class Simple_memchached_dashboard{
+class Simple_memcached_dashboard{
 	public $memcache = null;
 	public $list     = null;
 	public $status   = null;
@@ -588,11 +588,11 @@ $user = getenv('ADMIN_USER');
 $password = getenv('ADMIN_PASSWORD');
 
 if ($host || $port || $user || $password) {
-	new Simple_memchached_dashboard(
+	new Simple_memcached_dashboard(
 		$host ?: 'memcached', 
 		$port ?: 11211, [
 			$user ?: 'admin' => $password ?: 'admin',
 		]);
 } else {
-	new Simple_memchached_dashboard();
+	new Simple_memcached_dashboard();
 }
